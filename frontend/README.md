@@ -65,20 +65,50 @@ FleetLink is a full-stack logistics vehicle booking system. It allows users to a
 - Add vehicles, search and book, and manage bookings from the UI.
 
 ## Project Structure
+
 ```
 backend/
-  src/
-	 controllers/
-	 models/
-	 routes/
-	 config/
-	 tests/
+	src/
+		controllers/
+		models/
+		routes/
+		config/
+		tests/
 frontend/
-  src/
-	 pages/
-	 api.js
-	 App.jsx
-	 ...
+	src/
+		pages/
+		api.js
+		App.jsx
+```
+
+## API Endpoints
+
+### Vehicles
+
+**POST /api/vehicles**
+- Add a new vehicle
+- Body: `{ name: string, capacityKg: number, tyres: number }`
+- Response: Created vehicle object
+
+**GET /api/vehicles/available**
+- Search for available vehicles
+- Query params: `capacityRequired`, `fromPincode`, `toPincode`, `startTime` (ISO string)
+- Response: `{ estimatedRideDurationHours: number, vehicles: [ ... ] }`
+
+### Bookings
+
+**POST /api/bookings**
+- Create a new booking
+- Body: `{ vehicleId, fromPincode, toPincode, startTime, customerId }`
+- Response: Created booking object
+
+**GET /api/bookings**
+- List all bookings
+- Response: Array of booking objects (with vehicle populated)
+
+**DELETE /api/bookings/:id**
+- Cancel a booking by ID
+- Response: `{ message: 'Booking cancelled' }`
 ```
 
 ## License
