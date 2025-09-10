@@ -1,0 +1,217 @@
+.booking-row-even {
+  background: #f8fafc;
+}
+.booking-row-odd {
+  background: #eef2f7;
+}
+.bookings-page {
+  max-width: 700px;
+  margin: 2.5rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+.bookings-page h2 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 600;
+  color: #2d3748;
+}
+.bookings-loading {
+  text-align: center;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+.no-bookings {
+  text-align: center;
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.booking-card {
+  background: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border: 1px solid #e2e8f0;
+}
+.booking-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.booking-vehicle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2563eb;
+}
+.booking-cancel-btn {
+  min-width: 90px;
+  margin-left: 1rem;
+}
+.booking-card-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 1rem;
+  color: #374151;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 2rem;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.heading-add { color: #2563eb; }
+.heading-search { color: #16a34a; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+.button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.button-primary {
+  background: #2563eb;
+  color: #fff;
+}
+.button-primary:hover {
+  background: #1d4ed8;
+}
+.button-secondary {
+  background: #16a34a;
+  color: #fff;
+}
+.button-secondary:hover {
+  background: #15803d;
+}
+.button-book {
+  background: #3b82f6;
+  color: #fff;
+  margin-left: 1rem;
+}
+.button-book:hover {
+  background: #2563eb;
+}
+.message {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: #d97706;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background: #f3f4f6;
+  padding: 1rem 0;
+  border-radius: 0 0 1rem 1rem;
+  margin-bottom: 2rem;
+}
+.nav-link {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+}
+.nav-link:hover {
+  background: #e0e7ef;
+}
+.nav-link-search {
+  color: #15803d;
+}
+.vehicle-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.vehicle-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.vehicle-details {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
