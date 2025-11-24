@@ -99,16 +99,34 @@ export default function SearchAndBook() {
           transition={{ duration: 0.3, delay: 0.2 }}
         />
         <br />
-        <motion.input
-          className="input"
-          placeholder="From Pincode"
-          value={fromPincode}
-          onChange={(e) => setFromPincode(e.target.value)}
-          required
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, delay: 0.3 }}
-        />
+      <div style={{margin:'1rem 0'}}>
+        <button
+          className="button button-secondary"
+          onClick={async () => {
+            setMessage('Seeding demo data...');
+            try {
+              await api.post('/debug/seed');
+              setMessage('Demo data seeded — searching...');
+              // small delay to allow the backend to persist
+              setTimeout(() => handleSearch(), 500);
+            } catch (err) {
+              setMessage('Failed to seed demo data');
+            }
+          }}
+        >
+          Load Demo Data
+        </button>
+      </div>
+      <motion.input
+        className="input"
+        placeholder="From Pincode"
+        value={fromPincode}
+        onChange={(e) => setFromPincode(e.target.value)}
+        required
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
+      />
         <br />
         <motion.input
           className="input"
